@@ -9,10 +9,6 @@ import org.apache.hadoop.mapreduce.Mapper;
 public class WordCountMapper extends
 		Mapper<LongWritable, Text, Text, IntWritable> {
 
-	protected void setup(
-			org.apache.hadoop.mapreduce.Mapper<LongWritable, Text, Text, IntWritable>.Context arg0)
-			throws java.io.IOException, InterruptedException {
-	};
 
 	protected void map(
 			LongWritable key,
@@ -43,10 +39,5 @@ public class WordCountMapper extends
 			
 		}
 		
-	};
-
-	protected void cleanup(
-			org.apache.hadoop.mapreduce.Mapper<LongWritable, Text, Text, IntWritable>.Context arg0)
-			throws java.io.IOException, InterruptedException {
 	};
 }

@@ -7,11 +7,6 @@ import org.apache.hadoop.mapreduce.Reducer;
 public class WordCountReducer extends
 		Reducer<Text, IntWritable, Text, IntWritable> {
 
-	protected void setup(
-			org.apache.hadoop.mapreduce.Reducer<Text, IntWritable, Text, IntWritable>.Context arg0)
-			throws java.io.IOException, InterruptedException {
-	};
-
 	protected void reduce(
 			Text key,
 			java.lang.Iterable<IntWritable> values,
@@ -27,8 +22,4 @@ public class WordCountReducer extends
 		context.write(key, new IntWritable(sum));
 	};
 
-	protected void cleanup(
-			org.apache.hadoop.mapreduce.Reducer<Text, IntWritable, Text, IntWritable>.Context arg0)
-			throws java.io.IOException, InterruptedException {
-	};
 }
